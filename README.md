@@ -7,7 +7,7 @@ StatQL is an open-source, production-ready data analytics AI agent that bridges 
  **[Medium Blog](https://medium.com/@gandhivibhuti1802/statistical-validation-in-llm-powered-analytics-agents-5e28d958653b)**
 
 ## Architecture
-<img width="7337" height="7942" alt="Customer Segmentation-2026-05-24-222050" src="https://github.com/user-attachments/assets/c00c3ad2-0743-4359-a71b-bcabf538989a" />
+<img width="7337" height="7942" alt="Customer Segmentation-2026-05-24-224918" src="https://github.com/user-attachments/assets/392d2434-0227-43a9-bb84-0d6b17446ffb" />
 
 ## What makes it different
 
