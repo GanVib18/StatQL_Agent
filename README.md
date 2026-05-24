@@ -1,4 +1,4 @@
-# StatQL
+# StatQL Agent
 
 ## A Statistically Validated Data Analytics Agent with Semantic Caching
 
