@@ -1,9 +1,9 @@
-# StatQL: A Statistically Validated Data Analytics Agent with Semantic Caching
+# StatQL
+## 🧠 A Statistically Validated Data Analytics Agent with Semantic Caching
 
 StatQL is an open-source, production-ready data analytics agent that bridges the gap between natural language and trustworthy enterprise insights. While standard LLM API wrappers blindly execute generated SQL and pass raw numbers back to the user, StatQL introduces a dedicated Statistical Validation Layer that automatically intercepts query results to run t-tests, fit linear regressions, and calculate bootstrap confidence intervals. By grounding the LLM's natural language responses in mathematical rigor and pairing it with a local, high-performance semantic caching architecture (DuckDB + FAISS), StatQL eliminates hallucinated metrics, quantifies uncertainty, and slashes API latency—transforming a brittle text-to-SQL script into a reliable, analytical decision-making engine.
 
 ## Architecture
-<img width="8192" height="3845" alt="Customer Segmentation-2026-05-24-215854" src="https://github.com/user-attachments/assets/3abf4d4a-ec2f-474d-bfdd-f468e3169a58" />
 <img width="7337" height="7942" alt="Customer Segmentation-2026-05-24-222050" src="https://github.com/user-attachments/assets/c00c3ad2-0743-4359-a71b-bcabf538989a" />
 
 ## What makes it different
