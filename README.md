@@ -4,30 +4,7 @@ StatQL is an open-source, production-ready data analytics agent that bridges the
 
 ## Architecture
 <img width="8192" height="3845" alt="Customer Segmentation-2026-05-24-215854" src="https://github.com/user-attachments/assets/3abf4d4a-ec2f-474d-bfdd-f468e3169a58" />
-
-```
-User question
-      │
-      ▼
-SemanticCache ──hit──▶ cached answer
-      │ miss
-      ▼
-AnalyticsAgent (LangGraph)
-  parse_question
-      │
-  generate_sql  ◀── retry (max 3×) ──┐
-      │                               │
-  execute_query ──── SQL error ───────┘
-      │
-  synthesize_answer
-      │
-  StatValidator → CI / p-value / bootstrap
-      │
-  hallucination_guard
-      │
-      ▼
-    Answer + stats JSON
-```
+<img width="7337" height="7942" alt="Customer Segmentation-2026-05-24-222050" src="https://github.com/user-attachments/assets/c00c3ad2-0743-4359-a71b-bcabf538989a" />
 
 ## What makes it different
 
