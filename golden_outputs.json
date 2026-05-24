@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Which country generates the most total revenue?",
+    "required_fields": ["answer", "sql", "stats"],
+    "required_stats_fields": ["type", "interpretation"],
+    "answer_must_not_be_empty": true
+  },
+  {
+    "question": "What is the monthly revenue trend over time?",
+    "required_fields": ["answer", "sql", "stats"],
+    "required_stats_fields": ["type", "interpretation", "slope"],
+    "answer_must_not_be_empty": true
+  },
+  {
+    "question": "Compare revenue between the United Kingdom and Germany.",
+    "required_fields": ["answer", "sql", "stats"],
+    "required_stats_fields": ["type", "interpretation"],
+    "answer_must_not_be_empty": true
+  },
+  {
+    "question": "What are the top 5 best-selling products by quantity?",
+    "required_fields": ["answer", "sql", "stats"],
+    "required_stats_fields": ["type", "interpretation"],
+    "answer_must_not_be_empty": true
+  },
+  {
+    "question": "What is the average order value per customer?",
+    "required_fields": ["answer", "sql", "stats"],
+    "required_stats_fields": ["type", "interpretation"],
+    "answer_must_not_be_empty": true
+  }
+]
