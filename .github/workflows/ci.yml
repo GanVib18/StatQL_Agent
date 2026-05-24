@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt pytest
+
+      - name: Run unit tests
+        run: pytest tests/test_data_layer.py tests/test_stat_validator.py -v
+
+  prompt-stability:
+    runs-on: ubuntu-latest
+    # Only runs when GROQ_API_KEY is available (set as a repo secret)
+    if: ${{ secrets.GROQ_API_KEY != '' }}
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      GROQ_MODEL:   ${{ secrets.GROQ_MODEL }}
+      RUN_STABILITY: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt pytest
+
+      - name: Download demo dataset
+        run: |
+          pip install kaggle
+          kaggle datasets download -d carrie1/ecommerce-data -p data/ --unzip
+          mv data/data.csv data/online_retail.csv || true
+
+      - name: Run prompt stability test
+        run: pytest tests/test_prompt_stability.py -v
